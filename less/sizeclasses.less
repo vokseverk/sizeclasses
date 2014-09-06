@@ -1,43 +1,28 @@
-
-@debug-rules: {
-	display: inline-block;
-	position: absolute;
-	top: 0;
-	right: 0;
-	padding: 2px 4px;
-
-	color: #303030;
-	background: #f0e77c;
-	opacity: 0.8;
-	border-bottom-left-radius: 8px;
-
-	font: 10px "Monaco", monospace;
-	text-transform: uppercase;
-};
+@import "sizeclasses-setup";
 
 .compact-width(@rules) {
-	@media only screen and (max-width: 568px) {
+	@media only screen and (max-width: @compact-width-breakpoint) {
 		@rules();
 	
-		.debug &:before {
+		.debug &:before when (@debug-sizeclasses = true) {
 			content: "Compact ↔️";
 			@debug-rules();
 		}
 	}
 	
-	.sc-cw & { @rules(); }
+	.sc-cw & when (@include-sizeclass-helpers = true) { @rules(); }
 	
 }
 
 .regular-width(@rules) {
-	@media only screen and (min-width: 569px) {
+	@media only screen and (min-width: @regular-width-breakpoint) {
 		@rules();
 		
-		.debug &:before {
+		.debug &:before when (@debug-sizeclasses = true) {
 			content: "Regular ↔️";
 			@debug-rules();
 		}
 	}
 
-	.sc-rw & { @rules(); }
+	.sc-rw & when (@include-sizeclass-helpers = true) { @rules(); }
 }
