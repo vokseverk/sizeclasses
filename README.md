@@ -8,7 +8,7 @@ I still have no idea if it'll work, but I'm going to use it extensively until I 
 
 To create "compact" and "regular" styles for a selector:
 
-```
+```css
 .header {
 	// These styles apply to all size classes
 	font: Times, serif;
