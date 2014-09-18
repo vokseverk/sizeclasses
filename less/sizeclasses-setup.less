@@ -4,9 +4,9 @@
 // Include actual CSS classes, e.g.: `.sc-cw` and `.sc-rw` etc.
 @include-sizeclass-helpers: false;
 
-// Breakpoints for determining when to use compact/regular
+// Breakpoint for determining when to use compact/regular
 @compact-width-breakpoint: 568px;
-@regular-width-breakpoint: 569px;
+@regular-width-breakpoint: @compact-width-breakpoint + 1;
 
 @debug-rules: {
 	display: inline-block;
