@@ -43,6 +43,13 @@ To create "compact" and "regular" styles for a selector:
 }
 ```
 
+## Installation
+
+Grab the two LESS files and put them somewhere in your app (e.g. in a `vendor` folder or similar). Then use `@import "{path/to/}vendor/sizeclasses"` in your main LESS file, to start using them.
+
+Alternatively, you can use [this little tool][SUBMERGE] to grab the files using *git subtree merge* magic.
+
+[SUBMERGE]: http://greystate.dk/resources/subtree-merge/?rf=less&u=vokseverk&b=master&r=sizeclasses&lf=app/less/sizeclasses
 
 ## Implementation
 
